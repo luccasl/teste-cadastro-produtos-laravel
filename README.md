@@ -24,20 +24,11 @@ Iniciar servidor e containers do Laravel Sail
 ```bash
   vendor/bin/sail up
 ```
-    
-# Laravel 9 Back End
-
-Serviço REST em Laravel 9 que alimenta as rotinas do teste de cadastro de produtos.
 
 
 ## Autor
 
 - [@luccasl](https://www.github.com/luccasl)
-
-
-# Laravel 9 Back End
-
-Serviço REST em Laravel 9 que alimenta as rotinas do teste de cadastro de produtos.
 
 
 # Documentação
