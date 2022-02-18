@@ -13,6 +13,8 @@ Instalar dependências do composer
   composer install
 ```
 
+Renomear arquivo ".env.example" para ".env" (opicional)
+
 Executar migrations
 
 ```bash
@@ -23,6 +25,21 @@ Iniciar servidor e containers do Laravel Sail
 
 ```bash
   vendor/bin/sail up
+```
+
+
+## SQL de relevância de produtos
+
+```sql
+SELECT t.id,
+	   t.name,
+	   (SELECT group_concat(p.name separator ', ')
+		  FROM product p
+		INNER JOIN product_tag pt ON pt.product_id
+        WHERE pt.tag_id = t.id
+        ORDER BY p.name) products
+  FROM tag t
+ORDER BY t.id, t.name
 ```
 
 
