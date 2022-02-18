@@ -13,7 +13,13 @@ Instalar dependências do composer
   composer install
 ```
 
-Iniciar servidor e containers do Laravel
+Executar migrations
+
+```bash
+  vendor/bin/sail artisan migrate
+```
+
+Iniciar servidor e containers do Laravel Sail
 
 ```bash
   vendor/bin/sail up
